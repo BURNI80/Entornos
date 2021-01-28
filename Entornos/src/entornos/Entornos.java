@@ -19,12 +19,19 @@ public class Entornos {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner sc = new Scanner(System.in);
+        int dato;
+        System.out.println("Cuantos numeros quieres?");
+        dato=sc.nextInt();
+        if (dato>10){
+            System.out.println("No puede ser mayor que 10.");
+            return;
+        }
         int numeros[];
-        numeros = new int[10];
-        for (int i = 0; i <= 9; i++) {
+        numeros = new int[dato];
+        for (int i = 0; i <= (dato-1); i++) {
             System.out.println("Dime un numero:");
             numeros[i] = sc.nextInt();
-            for (int a = 0; a <= 9; a++) {
+            for (int a = 0; a <= (dato-1); a++) {
                 if (numeros[i] == numeros[a] && i!=a) {
                     System.out.println("Has puesto un numero repetido");
                     return;
