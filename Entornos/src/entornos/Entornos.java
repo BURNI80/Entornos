@@ -24,6 +24,12 @@ public class Entornos {
         for (int i = 0; i <= 9; i++) {
             System.out.println("Dime un numero:");
             numeros[i] = sc.nextInt();
+            for (int a = 0; a <= 9; a++) {
+                if (numeros[i] == numeros[a] && i!=a) {
+                    System.out.println("Has puesto un numero repetido");
+                    return;
+                }
+            }
         }
         Arrays.sort(numeros);
         for (int i = 0; i <= 9; i++) {
