@@ -26,6 +26,9 @@ public class Entornos {
             System.out.println("No puede ser mayor que 10.");
             return;
         }
+        System.out.println("Que numero quieres buscar?");
+        int busqueda=sc.nextInt();
+
         int numeros[];
         numeros = new int[dato];
         for (int i = 0; i <= (dato-1); i++) {
@@ -38,6 +41,18 @@ public class Entornos {
                 }
             }
         }
+        
+        for (int s=0; s<(dato-1);s++){
+            if (numeros[s]==busqueda){
+                System.out.println("El numero que quieres buscar esta en el array");
+                break;
+            }
+            else{
+                System.out.println("El numero que buscas NO esta en el array");
+                break;
+            }
+        }
+        
         Arrays.sort(numeros);
         for (int i = 0; i <= 9; i++) {
             System.out.println("Numero: " + numeros[i]);
