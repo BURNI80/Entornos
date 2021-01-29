@@ -22,7 +22,7 @@ public class Entornos {
         int dato;
         System.out.println("Cuantos numeros quieres?");
         dato=sc.nextInt();
-        if (dato>10){
+        if (dato>10 || dato<0){
             System.out.println("No puede ser mayor que 10.");
             return;
         }
